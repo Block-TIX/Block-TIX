@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 94% 50%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 24 94% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for glowing effects */
+.before\:absolute::before {
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  opacity: var(--opacity);
+  transition: opacity 0.3s ease;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Particle effects */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* 3D perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@media (max-width: 640px) {
+  .feature-icon {
+    height: 28px !important;
+    width: 28px !important;
+  }
+}
