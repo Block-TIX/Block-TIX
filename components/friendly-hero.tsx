@@ -6,7 +6,7 @@ import Link from "next/link"
 import { motion, useAnimation } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Ticket, Users, Star } from "lucide-react"
+import { Ticket, Users } from "lucide-react"
 import { EventCarousel } from "./event-carousel"
 
 export function FriendlyHero() {
@@ -125,28 +125,7 @@ export function FriendlyHero() {
           </div>
         </div>
 
-        <div className="mt-8 flex items-center justify-center lg:justify-start">
-          <div className="flex -space-x-2">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="relative w-8 h-8 rounded-full border-2 border-background overflow-hidden">
-                <Image
-                  src={`/diverse-group-portrait.png?height=100&width=100&query=person+${i}+headshot`}
-                  alt={`User ${i}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="ml-3 flex items-center">
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-            <span className="ml-2 text-sm">Loved by 250,000+ event-goers</span>
-          </div>
-        </div>
+        {/* Stars and testimonial section removed */}
       </motion.div>
 
       <motion.div
