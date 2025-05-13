@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, Search, Filter, Ticket, Heart } from "lucide-react"
+import { Calendar, MapPin, Search, Filter, Ticket, Heart, Info } from "lucide-react"
 import { YouTubeBackground } from "@/components/youtube-background"
 
 export default function EventsPage() {
@@ -422,6 +422,16 @@ export default function EventsPage() {
             <p className="text-xl text-muted-foreground max-w-2xl mb-8">
               Discover amazing events happening near you and secure your tickets with just a few clicks!
             </p>
+
+            {/* Demo Notice Banner */}
+            <div className="w-full max-w-4xl mb-8 bg-gradient-to-r from-orange-500/10 to-pink-500/10 backdrop-blur-sm p-3 rounded-xl border border-orange-500/20 flex items-center justify-center gap-2">
+              <div className="bg-gradient-to-r from-orange-500 to-pink-500 p-1.5 rounded-full">
+                <Info className="h-4 w-4 text-white" />
+              </div>
+              <p className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500">
+                Events and event data shown are for demonstration purposes only. BlockTix is currently in beta.
+              </p>
+            </div>
 
             {/* Search and Filter */}
             <div className="w-full max-w-4xl bg-background/80 backdrop-blur-sm p-4 rounded-xl border border-orange-500/20">
